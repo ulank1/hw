@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.discover.DiscoverFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/imageStyle"
+        android:src="@drawable/ic_quizz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textQuestionAmount"
+        style="@style/textAmountQStyle"
+        android:text="Question amount: "
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textAmount"
+        style="@style/textAmountStyle"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/textQuestionAmount"
+        app:layout_constraintStart_toEndOf="@+id/textQuestionAmount"
+        app:layout_constraintTop_toTopOf="@+id/textQuestionAmount" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/seekBarCatStyle"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestionAmount" />
+
+    <TextView
+        android:id="@+id/textCategory"
+        style="@style/textCategoryStyle"
+        android:text="Category"
+        app:layout_constraintBottom_toTopOf="@+id/cardSpinnerCategory"
+        app:layout_constraintStart_toStartOf="@+id/cardSpinnerCategory" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSpinnerCategory"
+        style="@style/cardViewStyle"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/category"
+            android:visibility="visible" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textDifficulty"
+        style="@style/textDifficultyStyle"
+        android:text="Difficulty"
+        app:layout_constraintBottom_toTopOf="@+id/cardSpinnerDifficulty"
+        app:layout_constraintStart_toStartOf="@+id/cardSpinnerDifficulty" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSpinnerDifficulty"
+        style="@style/cardViewStyle"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/cardSpinnerCategory">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinnerDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/difficulty"
+            android:visibility="visible" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startBtn"
+        style="@style/startBtnStyle"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardSpinnerDifficulty" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.83698297" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.16788322" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupDouble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="cardFive,cardSix" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupMultiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="cardFirst,cardSecond,cardThird,cardFour" />
+
+    <TextView
+        android:id="@+id/textQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="31dp"
+        android:layout_marginHorizontal="81dp"
+        android:text="What is the largest city\n and commercial capital of\n Sri Lanka?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textFirst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6979F8"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Colombo" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardFirst">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textSecond"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6979F8"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Second" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardThird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardSecond">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textThird"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6979F8"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Tech" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:textColor="@color/white"
+        android:id="@+id/cardFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardThird">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textFour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6979F8"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Colombo" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textFive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6979F8"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Colombo" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardFive">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textSix"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6979F8"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Colombo" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:text="Skip"
+        android:textColor="@color/white"
+        android:id="@+id/skip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
